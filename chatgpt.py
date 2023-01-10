@@ -37,7 +37,13 @@ while True:
         break
     elif choice == "a":
         product = input("Enter product name: ")
-        amount = int(input("Enter amount: "))
+        amount = 0
+        while True:
+            try:
+                amount = int(input("Enter amount: "))
+                break
+            except:
+                print("not integer")
         price = float(input("Enter price: "))
         cart.add_item(product, amount, price)
 
